@@ -1,0 +1,273 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
+
+@font-face {
+	font-family: 'fontawesome';
+	src:url('../fonts/fontawesome.eot');
+	src:url('../fonts/fontawesome.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/fontawesome.svg#fontawesome') format('svg'),
+		url('../fonts/fontawesome.woff') format('woff'),
+		url('../fonts/fontawesome.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+.clearfix:before,
+.clearfix:after {
+	content: " ";
+	display: table;
+}
+
+.clearfix:after {
+	clear: both;
+}
+
+*,
+*:after,
+*:before {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    padding: 0; 
+    margin: 0;
+    font-size: 100%; 
+    font-family: 'Lato', Calibri, Arial, sans-serif;
+    color: #47a3da;
+}
+
+a {
+	text-decoration: none;
+}
+
+ul, li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.container {
+
+    > header {
+        width: 90%;
+        max-width: 70em;
+        margin: 0 auto;
+        padding: 2.875em 1.875em 1.875em;  
+    
+        h1 {
+            float: left;
+            font-size: 2.125em;
+            line-height: 1.3em;
+            margin: 0;
+            font-weight: 400;
+        }
+
+        span {
+            display: block;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 8px;
+            padding: 0 0 0.6em 0.1em;
+        }
+
+        nav {
+            float: right;
+
+            a {
+                display: block;
+                float: left;
+                position: relative;
+                width: 2.5em;
+                height: 2.5em;
+                background: #fff;
+                border-radius: 50%;
+                color: transparent;
+                margin: 0 0.1em;
+                border: 4px solid #47a3da;
+                text-indent: -8000px;
+            }
+
+            a:after {
+                content: attr(data-info);
+                color: #47a3da;
+                position: absolute;
+                width: 600%;
+                top: 120%;
+                text-align: right;
+                right: 0;
+                opacity: 0;
+                pointer-events: none;
+            }
+
+            a:hover:after {
+                opacity: 1;
+            }
+
+            a:hover {
+                background: #47a3da;
+            }
+
+            a:hover:before {
+                color: #fff;
+            }
+        }
+    }
+
+    .back {
+        background-color: #47a3da;
+        color: white;
+    }
+    
+    .back:hover {
+        color: white;  
+    }    
+}
+
+.cbp-hrmenu {
+	width: 100%;
+	margin-top: 2em;
+	border-bottom: 4px solid #47a3da;
+
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+    }
+
+    > ul,
+    .cbp-hrsub-inner {
+	    width: 90%;
+	    max-width: 70em;
+	    margin: 0 auto;
+	    padding: 0 1.875em;
+    }  
+
+    > ul {
+        > li {
+            display: inline-block;
+
+            > a {
+                font-weight: 700;
+                padding: 1em 2em;
+                color: #999;
+                display: inline-block;
+            }
+
+            > a:hover {
+                color: #47a3da;
+            }
+        }
+
+        > li.cbp-hropen a,
+        > li.cbp-hropen > a:hover {
+	        color: #fff;
+	        background: #47a3da;
+        }
+    }
+}
+.cbp-hrmenu {
+
+    .cbp-hrsub {
+        display: none;
+        position: absolute;
+        background: #47a3da;
+        width: 100%;
+        left: 0;
+    }
+
+    .cbp-hrsub-inner > div {
+        width: 33%;
+        float: left;
+        padding: 0 2em 0;
+    }
+
+    .cbp-hrsub-inner:before,
+    .cbp-hrsub-inner:after {
+	    content: " ";
+	    display: table;
+    }
+
+    .cbp-hrsub-inner:after {
+        clear: both;
+    }
+
+    .cbp-hrsub-inner > div a{
+        line-height: 2em;
+        color: white;
+    }    
+
+    .cbp-hrsub-inner > div a:hover {
+        color: black;  
+    }
+}
+
+.cbp-hrsub h4 {
+	color: #afdefa;
+	padding: 2em 0 0.6em;
+	margin: 0;
+	font-size: 160%;
+	font-weight: 300;
+}
+
+@media screen and (max-width: 52.75em) { 
+
+	.cbp-hrmenu {
+		font-size: 80%;
+	}
+}
+
+@media screen and (max-width: 43em) { 
+
+	.cbp-hrmenu {
+		font-size: 120%;
+		border: none;
+
+        > ul,
+	    .cbp-hrsub-inner {
+		    width: 100%;
+		    padding: 0;
+	    }
+        .cbp-hrsub-inner {
+            padding: 0 2em;
+            font-size: 75%;
+        }
+
+        > ul > li {
+            display: block;
+            border-bottom: 4px solid #47a3da;
+
+            > a { 
+                display: block;
+                padding: 1em 3em;
+            }
+        }
+
+        .cbp-hrsub { 
+            position: relative;
+        }
+
+        h4 {
+            padding-top: 0.6em;
+        }
+	}
+}
+
+@media screen and (max-width: 36em) { 
+	.cbp-hrmenu .cbp-hrsub-inner > div {
+		width: 100%;
+		float: none;
+		padding: 0 2em;
+	}
+}
+
+.main li .cbp-hrsub {
+	display: none;
+}
+
+.main li .cbp-hrsub.open {
+	display: block;
+    padding-bottom: 3em;
+}
+
